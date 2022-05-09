@@ -12,15 +12,15 @@ Dependencies:
 -------------
 
 Running:
-    * Python3
-    * Cython (≥ 0.20)
-    * A working OpenGL driver
-    * libepoxy
-    * SDL2
-    * SDL2_image, SDL2_mixer, SDL2_ttf
-    * A TTF font file, placed as “font.ttf” in the game directory.
-
-
+   *python
+   *python3
+   *glfw
+   *sdl2
+   *sdl2_image
+   *sdl2_mixer
+   *sdl2_ttf
+   *libepoxy
+   *libgl
 Building sample data:
     * thtk (http://code.google.com/p/thtk/)
 
@@ -35,7 +35,7 @@ http://pytouhou.linkmauve.fr/
 
 
 
-Contact:
+Contact(May be dead email):
 --------
 
-You are welcome to join us at <xmpp:touhou@muc.linkmauve.fr> on jabber!
+linkmauve@linkmauve.fr
