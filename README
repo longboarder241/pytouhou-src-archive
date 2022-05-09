@@ -6,12 +6,9 @@ a popular danmaku (bullet hell) game published for Windows by Team Shanghai Alic
 Although the main reason behind this project is sheer curiosity, other motivations are portability and extendability.
 Additionally, this project aims for a perfect compatibility with the official game, and thus become some sort of reference implementation.
 
-
-
 Dependencies:
 -------------
 
-Running:
    *python
    *python3
    *glfw
@@ -21,10 +18,29 @@ Running:
    *sdl2_ttf
    *libepoxy
    *libgl
-Building sample data:
-    * thtk (http://code.google.com/p/thtk/)
-
-
+Build instructions:
+#Download the devel/dev and regular files of the ones listed above
+>hg clone https://hg.linkmauve.fr/touhou
+>cd touhou
+>python3 setup.py build
+>python3 setup.py install (or add sudo to have it installed for all users)
+PORTABLE BUILD INSTRUCTIONS:
+#After cding into the touhou directory follow the listed below commands
+>python3 setup.py build_ext --inplace
+>python3 ./scripts/pytouhou
+Running:
+in the directory of the game files locate all the files that have off characters and type this command
+>convmv -r --nosmart --notest -f shiftjis -t UTF8 *.file-extension-name
+(ex:) convmv -r --nosmart --notest -f shiftjis -t UTF8 *.DAT
+if you don't have convmv you can easily get it on any linux platform here:
+https://j3e.de/linux/convmv/
+then do a simple extraction and installation:
+>tar -xvf convmv-2.05.tar.gz
+>cd convmv-2.05
+>sudo cp convmv /usr/bin/
+>sudo chmod +x /usr/bin/convmv 
+Now finally to run the game simply cd into the directory where touhou 6 is kept and run pytouhou
+(to not see any terminal output do pytouhou & disown and close your terminal window) 
 
 Documentation:
 --------------
